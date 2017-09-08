@@ -31,7 +31,7 @@ func (ib *InsertBuilder) Columns(columns ...string) *InsertBuilder {
 
 func (ib *InsertBuilder) Values(values ...string) *InsertBuilder {
 	for _, val := range values {
-		ib.values = append(ib.values, fmt.Sprintf("'%v'", val))
+		ib.values = append(ib.values, "'"+val+"'")
 	}
 	return ib
 }
