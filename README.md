@@ -22,7 +22,7 @@ go get github.com/valuppo/sqlq
 
 ### How To Use
 - Select Query Builder <br />
-  There are 2 ways two select columns: Select(<COLUMN>, ...) or Columns(<COLUMN>, ...)
+  There are 2 ways two select columns: Select(Column, ...) or Columns(Column, ...)
 
 ```
 sql := sqlq.Select("id","name").Columns("email","address").From("users").Where("id", "=", "1").WhereOr("name", "LIKE", "%sqlq%")
@@ -38,7 +38,7 @@ fmt.Println(sql) //INSERT INTO users (name,email) VALUES ('sqlq', 'sqlq@valuppo.
 ```
 
 - Update Query Builder <br />
-  There are 2 ways two set columns and values: Set(<COLUMN>, <VALUE>) or SetMultiple(<COLUMNS>, <VALUES>) <br />
+  There are 2 ways two set columns and values: Set(Column, Value) or SetMultiple(Columns, Values) <br />
   Where in set multiple you can pass slice of columns and values into it
 
 ```
